@@ -1,0 +1,186 @@
+object Form1: TForm1
+  Left = 0
+  Top = 0
+  Caption = 'Form1'
+  ClientHeight = 445
+  ClientWidth = 325
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  OnCreate = FormCreate
+  OnKeyDown = FormKeyDown
+  OnKeyUp = FormKeyUp
+  Touch.InteractiveGestures = [TwoFingerTap, PressAndTap, LongTap, DoubleTap]
+  DesignerMasterStyle = 0
+  object cRigth: TCircle
+    Position.X = 185.000000000000000000
+    Position.Y = 282.000000000000000000
+    Size.Width = 50.000000000000000000
+    Size.Height = 50.000000000000000000
+    Size.PlatformDefault = False
+    OnMouseDown = cRigthMouseDown
+    OnMouseUp = DefaultMouseUp
+  end
+  object cForward: TCircle
+    Position.X = 135.000000000000000000
+    Position.Y = 236.000000000000000000
+    Size.Width = 50.000000000000000000
+    Size.Height = 50.000000000000000000
+    Size.PlatformDefault = False
+    OnMouseDown = cForwardMouseDown
+    OnMouseUp = DefaultMouseUp
+  end
+  object cLeft: TCircle
+    Position.X = 86.000000000000000000
+    Position.Y = 282.000000000000000000
+    Size.Width = 50.000000000000000000
+    Size.Height = 50.000000000000000000
+    Size.PlatformDefault = False
+    OnMouseDown = cLeftMouseDown
+    OnMouseUp = DefaultMouseUp
+  end
+  object cBack: TCircle
+    Position.X = 135.000000000000000000
+    Position.Y = 328.000000000000000000
+    Size.Width = 50.000000000000000000
+    Size.Height = 50.000000000000000000
+    Size.PlatformDefault = False
+    OnMouseDown = cBackMouseDown
+    OnMouseUp = DefaultMouseUp
+  end
+  object time: TAlphaTrackBar
+    CanParentFocus = True
+    Max = 5000.000000000000000000
+    Orientation = Horizontal
+    Position.X = 135.000000000000000000
+    Position.Y = 197.000000000000000000
+    TabOrder = 4
+    Value = 200.000000000000000000
+    OnChange = timeChange
+  end
+  object speed: TTrackBar
+    CanParentFocus = True
+    Max = 255.000000000000000000
+    Min = 50.000000000000000000
+    Orientation = Horizontal
+    Position.X = 135.000000000000000000
+    Position.Y = 170.000000000000000000
+    TabOrder = 5
+    Value = 128.000000000000000000
+    OnTracking = speedTracking
+  end
+  object Switch1: TSwitch
+    IsChecked = False
+    Position.X = 210.000000000000000000
+    Position.Y = 8.000000000000000000
+    TabOrder = 6
+    OnClick = Switch1Click
+  end
+  object btnA1: TButton
+    Position.X = 32.000000000000000000
+    Position.Y = 72.000000000000000000
+    TabOrder = 7
+    Text = 'A1'
+    OnClick = btnA1Click
+  end
+  object Edit1: TEdit
+    Touch.InteractiveGestures = [LongTap, DoubleTap]
+    TabOrder = 10
+    Text = '192.168.4.1'
+    Position.X = 37.000000000000000000
+    Position.Y = 13.000000000000000000
+  end
+  object Edit2: TEdit
+    Touch.InteractiveGestures = [LongTap, DoubleTap]
+    TabOrder = 9
+    Text = '8013'
+    Position.X = 145.000000000000000000
+    Position.Y = 13.000000000000000000
+    Size.Width = 45.000000000000000000
+    Size.Height = 22.000000000000000000
+    Size.PlatformDefault = False
+  end
+  object Memo1: TMemo
+    Touch.InteractiveGestures = [Pan, LongTap, DoubleTap]
+    DataDetectorTypes = []
+    Align = Bottom
+    Position.Y = 386.000000000000000000
+    Size.Width = 325.000000000000000000
+    Size.Height = 59.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 11
+    Viewport.Width = 321.000000000000000000
+    Viewport.Height = 55.000000000000000000
+  end
+  object lblSpeed: TLabel
+    Position.X = 70.000000000000000000
+    Position.Y = 172.000000000000000000
+    Size.Width = 65.000000000000000000
+    Size.Height = 17.000000000000000000
+    Size.PlatformDefault = False
+    Text = 'lblSpeed'
+    TabOrder = 13
+  end
+  object lblTime: TLabel
+    Position.X = 70.000000000000000000
+    Position.Y = 199.000000000000000000
+    Size.Width = 57.000000000000000000
+    Size.Height = 17.000000000000000000
+    Size.PlatformDefault = False
+    Text = 'lblTime'
+    TabOrder = 14
+  end
+  object Button2: TButton
+    Position.X = 120.000000000000000000
+    Position.Y = 72.000000000000000000
+    TabOrder = 15
+    Text = 'Weelie'
+    OnClick = Button2Click
+  end
+  object Button3: TButton
+    Position.X = 208.000000000000000000
+    Position.Y = 72.000000000000000000
+    TabOrder = 16
+    Text = 'Button3'
+    OnClick = Button3Click
+  end
+  object Button4: TButton
+    Position.X = 32.000000000000000000
+    Position.Y = 102.000000000000000000
+    TabOrder = 17
+    Text = 'Button4'
+    OnClick = Button4Click
+  end
+  object Button1: TButton
+    Position.X = 208.000000000000000000
+    Position.Y = 102.000000000000000000
+    TabOrder = 18
+    Text = 'Button1'
+    OnClick = Button1Click
+  end
+  object Button5: TButton
+    Position.X = 120.000000000000000000
+    Position.Y = 102.000000000000000000
+    TabOrder = 19
+    Text = 'Button5'
+    OnClick = Button5Click
+  end
+  object Button6: TButton
+    Position.X = 229.000000000000000000
+    Position.Y = 236.000000000000000000
+    TabOrder = 21
+    Text = 'Button6'
+    OnClick = Button6Click
+  end
+  object Timer1: TTimer
+    Interval = 200
+    OnTimer = Timer1Timer
+    Left = 264
+    Top = 176
+  end
+  object UDP: TIdUDPClient
+    Port = 0
+    Left = 272
+    Top = 120
+  end
+end
